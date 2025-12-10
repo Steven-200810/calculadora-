@@ -11,7 +11,7 @@ function agregarValor(valor){
 }
 
 function manejarDecimal() {
-  const valorActual = resultado.value;
+  const valorActual = pantalla.value;
 
   // split separa la expresión por operadores
   const partes = valorActual.split(/[+\-x÷]/);
@@ -38,7 +38,7 @@ function borrarTodo() {
 
 
 function borrar() {
-    const valorActual = resultado.value;
+    const valorActual = pantalla.value;
 
   // Si solo hay un caracter, lo reemplaza por 0
   if (valorActual.length === 1) {
