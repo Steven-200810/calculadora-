@@ -54,8 +54,9 @@ function calcular() {
     try {
         let expresion = pantalla.value.replace("×", "*").replace("÷", "/");
 
-
-        if (/\/0(?!\.)/.test(expresion)) throw new Error("divCero");
+        if (expresion.includes('÷0') || expresion.includes('/0')) {
+            throw new Error('División por cero');
+            }  
 
         let resultado = eval(expresion);
 
